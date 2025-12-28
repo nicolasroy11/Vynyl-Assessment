@@ -1,0 +1,36 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql" // change if needed (mysql, sqlite, etc.)
+  url      = "postgresql://postgres:postgres@db:5432/vynyl?schema=public"
+
+}
+
+model Product {
+  id          Int          @id @default(autoincrement())
+  title       String
+  description String
+  category    String
+  price       Float
+  stock       Int
+  brand       String
+  sku         String       @unique
+  weight      Float
+
+  meta        ProductMeta?
+
+  @@map("products")
+}
+
+model ProductMeta {
+  id        Int      @id @default(autoincrement())
+  createdAt DateTime
+  updatedAt DateTime
+
+  product   Product @relation(fields: [productId], references: [id], onDelete: Cascade)
+  productId Int     @unique
+
+  @@map("product_meta")
+}
