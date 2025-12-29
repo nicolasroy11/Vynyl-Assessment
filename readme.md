@@ -14,6 +14,7 @@ For your convenience, I containerized the entire application, reducing setup to 
 - Docker
 
 ### Start
+Whether you clone or download the code, all you have to do is navigate to the root of the folder in a terminal and run:
 ```bash
 docker compose up --build
 ```
