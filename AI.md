@@ -1,6 +1,6 @@
 ## How AI Was Used
 I used ChatGPT mainly for tasks that are repetitive, error-prone, or in the context of evaluation, would just not provide much value to the evaluator as to my ability as a developer. The following processes were accomplished or helped along in part by an LLM:
-- the generation of Dockerfiles and Docker-compose templates, latter reviewed and corrected
+- the generation of Dockerfiles and Docker-compose templates, later reviewed and corrected
 - the generation of the Prisma schema as laid out by the example product objects in the exercise literature, as well as the Product interface
 
 My intellisense on VSCode is outstanding. It fills out method, class and field stubs as if it read my mind. In the companion video, it is immediately visible how useful the autofill function turns out to be. In the context of a simple CRUD such as this, an entire application can be written in half the time. That is, as long as caution is taken to minimize copilot output to a handful of lines at a time so that control is maintained over code and context. To this effect, I tend to limit any AI/LLM contribution to minimal context-unaware code blocks that can be fixed one at a time.
